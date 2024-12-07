@@ -1,109 +1,150 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>About me</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Bayo Herbert</title>
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff; /* Set background color to white */
+        line-height: 1.6;
+      }
 
-		<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">Bayo Herbert</a>
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<!--<li><a href="generic.html" class="active">Generic</a></li>
-						<li><a href="elements.html">Elements</a></li> -->
-					</ul>
-				</nav>
-			</header>
+      /* Navigation Header */
+      nav {
+        background-color: #333; /* Black background for nav */
+        padding: 15px 0;
+        text-align: center;
+      }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 1.2em;
+      }
 
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">Bayo Herbert</h1>
-							<!--<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>-->
-							<p>Hi there! I'm Bayo Herbert, a dedicated and passionate software engineer with over 5 years of experience in building dynamic and scalable web applications. My journey in the tech world began at a young age, fueled by an insatiable curiosity for how things work and a love for solving complex problems.</p>
-							<p>I grew up in a small town where access to technology was limited, but that didn't deter my enthusiasm. I started learning to code in high school, teaching myself the basics of HTML, CSS, and JavaScript through online resources and books. This early passion for technology set the foundation for my future career.</p>
-							 <h2>Education.</h2>
-                                                                        <p>I pursued a Bachelor's degree in Computer Science at XYZ University, where I graduated with honors. During my time at university, I gained a solid understanding of computer science principles, data structures, algorithms, and software engineering practices. I was actively involved in several coding clubs and participated in numerous hackathons, which helped me hone my skills and collaborate with other like-minded individuals.</p>
-                                                                        <h2>Experience</h2>
-                                                                        <p>Upon graduation, I joined ABC Technologies as a Junior Developer, where I worked on a variety of projects ranging from small websites to large-scale enterprise applications. Over the years, I progressed to a Senior Developer role, taking on more responsibilities and leading a team of talented developers.
+      nav a:hover {
+        text-decoration: underline;
+      }
 
-                                                                                Currently, I work at DEF Solutions, where I focus on developing innovative solutions that drive business growth. My expertise lies in full-stack development, with a strong emphasis on front-end technologies like React and Angular, as well as back-end frameworks such as Node.js and Django. I am also proficient in cloud services like AWS and Azure, ensuring that the applications I build are not only functional but also highly scalable and reliable.
+      .about-section {
+        display: flex;
+        align-items: center; /* Align image and text on the same level */
+        justify-content: center; /* Center the content */
+        max-width: 900px;
+        margin: 50px auto;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        padding: 20px;
+      }
 
-                                                                                Throughout my career, I have always been committed to continuous learning and improvement. I regularly attend industry conferences, contribute to open-source projects, and stay up-to-date with the latest trends and technologies in the software engineering field.
+      .image-container {
+        flex: 1;
+        margin-right: 20px; /* Space between the image and text */
+        position: relative; /* To position the location text relative to the image */
+      }
 
-                                                                                I am passionate about leveraging technology to solve real-world problems and am always excited to take on new challenges. Whether it's developing a new feature, optimizing performance, or mentoring junior developers, I approach every task with enthusiasm and a drive for excellence.</p>
-                                                                	<h2>Skills</h2>
-									<p> JavaScript: Expert in ES6+, proficient in writing clean and efficient code for web development.
-                                                                                Python: Strong background in Python for both web development (Django, Flask) and data analysis.
-                                                                                Java: Proficient in Java for building scalable backend systems and Android applications.
-                                                                                C++: Solid understanding of C++ for system-level programming and performance-critical applications.
-                                                                                SQL: Advanced knowledge of SQL for database design, querying, and optimization.
+      .image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+      }
 
-</p>
-									<p>React: Extensive experience in building dynamic, responsive user interfaces.
-                                                                                Angular: Proficient in developing single-page applications with Angular.
-                                                                                Vue.js: Knowledgeable in using Vue.js for flexible and lightweight frontend development.
-                                                                                Redux: Expertise in state management with Redux in React applications.</p>
-                                                                        <h2>Backend</h2>
-                                                                        <p>Node.js: Strong skills in server-side development with Node.js and Express.
-                                                                                Django: Proficient in building robust web applications with Django.
-                                                                                Flask: Experience in developing lightweight web applications with Flask.
-                                                                                Spring Boot: Familiar with building enterprise-level applications with Spring Boot.</p>
-                                                                                <h2>Databases</h2>
-                                                                                <p>Relational Databases:
+      .location {
+        text-align: center;
+        font-size: 16px;
+        color: #666;
+        margin-top: 10px; /* Space between image and location */
+      }
 
-                                                                                        MySQL: Advanced skills in designing and managing MySQL databases.
-                                                                                        PostgreSQL: Proficient in using PostgreSQL for complex queries and data integrity.
+      .text-container {
+        flex: 2;
+        padding: 20px;
+      }
 
-                                                                                NoSQL Databases:
+      h1 {
+        font-size: 2em;
+        margin-bottom: 10px;
+        color: #333;
+      }
 
-                                                                                        MongoDB: Experience in working with MongoDB for flexible and scalable data storage.
-                                                                                        Redis: Knowledgeable in using Redis for caching and real-time data processing.</p>
-                                                                                        <h2>Tools & Technologies</h2>
-                                                                                        <p>Git: Expertise in version control with Git, including branching, merging, and collaborating on GitHub/GitLab</p>
-									<ul class="actions">
-                                                                                <li><a href="generic.html" class="button">Learn more</a></li>
-                                                                        </ul>
-                                                                </div>
-                                                        </div>
-                                                </section>
+      p {
+        margin-bottom: 15px;
+        color: #555;
+      }
 
-						</div>
-					</section>
+      a {
+        color: #0073e6;
+        text-decoration: none;
+      }
 
-			</div>
-			</section>
-		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+      a:hover {
+        text-decoration: underline;
+      }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      strong {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Header -->
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-	</body>
+    <!-- About Section -->
+    <main class="about-section">
+      <!-- Image Section -->
+      <div class="image-container">
+        <img
+          src="images/pic09.jpg" 
+          alt="Bayo Herbert"
+        />
+        <!-- Location Text Below the Image -->
+        <p class="location">Gaborone, Botswana</p>
+      </div>
+
+      <!-- Text Section -->
+      <div class="text-container">
+        <h1>Bayo Herbert</h1>
+        <p><strong>Holberton School Graduate ↗</strong></p>
+        <p>
+          I am a software engineer with a background in software development and artificial intelligence. I recently graduated from <strong>Holberton School</strong>, where I specialized in software engineering with a focus on Full-Stack Development and Machine Learning.
+        </p>
+        <p>
+          Currently, I work primarily with <strong>AI/ML systems</strong>, including Core ML and scalable backend systems (API/Microservices/DB). I’m skilled in developing solutions that merge performance, scalability, and usability.
+        </p>
+        <p>
+          In addition, I am proficient in <strong>Full-Stack Development</strong>—creating intuitive user interfaces and efficient backend systems for web and mobile platforms (using frameworks such as Next.js, React Native, and Material UI), some of which integrate machine learning models.
+        </p>
+        <p>
+          A passionate advocate for <strong>open-source development</strong>, I have contributed to libraries, tools, and projects in web development, data systems, and machine learning/AI—all of which are open-sourced on my <a href="https://github.com/yourusername" target="_blank">GitHub ↗</a>.
+        </p>
+        <p>Beyond tech, I am a competitive ping-pong player and an enthusiastic problem-solver on platforms like LeetCode.</p>
+        <p>
+          <strong>Contact Me:</strong><br />
+          Reach out via email: <a href="mailto:bayoherbert3@gmail.com" target="_blank">bayoherbert3@gmail.com ↗</a>
+        </p>
+        <p>
+          <a href="https://github.com/yourusername" target="_blank">GitHub ↗</a>
+          &middot;
+          <a href="https://www.linkedin.com/in/bayo-herbert-472b92160/" target="_blank">LinkedIn ↗</a>
+          &middot;
+          <a href="https://x.com/Herbertkartel1" target="_blank">Twitter ↗</a>
+        </p>
+      </div>
+    </main>
+  </body>
 </html>
