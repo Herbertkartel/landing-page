@@ -16,10 +16,11 @@
 
       /* Header Style */
       header {
-        background-color: #333;
-        color: #fff;
+        background-color: #fff;
+        color: #333;
         padding: 15px 0;
         text-align: center;
+        border-bottom: 1px solid #ddd;
       }
 
       header nav {
@@ -35,18 +36,18 @@
       }
 
       header nav ul li {
-        margin: 0 15px;
+        margin: 0 10px;
       }
 
       header nav ul li a {
-        color: #fff;
+        color: #333;
         text-decoration: none;
-        font-size: 1.2em;
+        font-size: 1em;
         padding: 5px 10px;
       }
 
       header nav ul li a:hover {
-        background-color: #555;
+        background-color: #f5f5f5;
         border-radius: 5px;
       }
 
@@ -128,6 +129,15 @@
         text-decoration: underline;
       }
 
+      /* Footer */
+      footer {
+        background-color: #fff;
+        color: #333;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid #ddd;
+      }
+
       /* Image Styles */
       .image-container {
         text-align: center;
@@ -136,8 +146,7 @@
 
       .image-container img {
         max-width: 100%;
-        height: auto;
-        max-height: 400px;
+        max-height: 600px;
         object-fit: cover;
         border-radius: 8px;
       }
@@ -150,6 +159,10 @@
       }
 
       @media (max-width: 480px) {
+        header nav ul li a {
+          font-size: 0.9em;
+        }
+
         .project-list {
           grid-template-columns: 1fr;
         }
@@ -163,7 +176,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="generic.html">About</a></li>
-          <li><a href="elements.html">Portfolio</a></li>
+          <!--<li><a href="elements.html">Portfolio</a></li>-->
           <li><a href="writing.html">Writing</a></li>
         </ul>
       </nav>
@@ -171,7 +184,7 @@
 
     <main class="projects-section">
       <p class="quote">
-        "Coding is like a puzzle, and sometimes the best way to solve it is to take a step back and look at the big picture." - Teddy Oweh
+        "Coding is like a puzzle, and sometimes the best way to solve it is to take a step back and look at the big picture." - Bayo Herbert
       </p>
 
       <h2>Projects</h2>
@@ -182,7 +195,7 @@
       </div>
 
       <div class="project-list">
-        <!-- Project 1 -->
+        <!-- Projects -->
         <div class="project-card">
           <h3 class="project-title">Trek - Optimal Path Simulation on Geospatial Map</h3>
           <p class="project-description">
@@ -191,76 +204,29 @@
           <p class="project-tech">Technologies: Python, Jupyter Notebook, HTML</p>
           <a class="project-link" href="https://github.com/yourusername/trek" target="_blank">View Project ↗</a>
         </div>
-
-        <!-- Project 2 -->
         <div class="project-card">
-          <h3 class="project-title">Stochastic Processes Disease Modelling</h3>
+          <h3 class="project-title">Smart Inventory Management</h3>
           <p class="project-description">
-            Presented new mathematical models that extend methodology, incorporating relationships between individuals (nodes) to create a network graph for disease outbreaks.
+            A web app for efficient inventory tracking and management using real-time data synchronization.
           </p>
-          <p class="project-tech">Technologies: Python, Jupyter Notebook</p>
-          <a class="project-link" href="https://github.com/yourusername/stochastic-model" target="_blank">View Project ↗</a>
+          <p class="project-tech">Technologies: Next.js, Firebase, Material UI</p>
+          <a class="project-link" href="https://github.com/yourusername/inventory" target="_blank">View Project ↗</a>
         </div>
-
-        <!-- Project 3 -->
         <div class="project-card">
-          <h3 class="project-title">WHOTAI</h3>
+          <h3 class="project-title">SoilPulse Carbon Tracker</h3>
           <p class="project-description">
-            Custom Tree AI/Model Algorithms & Parallel Programming to simulate/play Naija Whot (African Card Game) - Similar to Uno Card Game.
+            A tool that tracks soil carbon credits using IoT and satellite tech for sustainable agriculture.
           </p>
-          <p class="project-tech">Technologies: Python</p>
-          <a class="project-link" href="https://github.com/yourusername/whotai" target="_blank">View Project ↗</a>
+          <p class="project-tech">Technologies: Node-RED, Grafana, InfluxDB</p>
+          <a class="project-link" href="https://github.com/yourusername/soilpulse" target="_blank">View Project ↗</a>
         </div>
-
-        <!-- Project 4 -->
-        <div class="project-card">
-          <h3 class="project-title">Beardb</h3>
-          <p class="project-description">
-            A database system utilizing AES encryption for JSON data, providing secure and easy remote access, management, and deployment.
-          </p>
-          <p class="project-tech">Technologies: Python</p>
-          <a class="project-link" href="https://github.com/yourusername/beardb" target="_blank">View Project ↗</a>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="project-card">
-          <h3 class="project-title">Rocket Payload System | NASA USLI</h3>
-          <p class="project-description">
-            Developed 90% of the codebase for a payload system used in a Rocket launched at est. 4,600 ft to carry out various image processing techniques based on commands from an SDR Radio Receiver.
-          </p>
-          <p class="project-tech">Technologies: Python, Raspberry Pi</p>
-          <a class="project-link" href="https://github.com/yourusername/rocket-payload" target="_blank">View Project ↗</a>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="project-card">
-          <h3 class="project-title">Slic</h3>
-          <p class="project-description">
-            SLIC (Swift Low-latency Intercommunication) simplifies client-server communication using TCP/P2P protocols, focusing on latency reduction through optimized algorithms.
-          </p>
-          <p class="project-tech">Technologies: Python</p>
-          <a class="project-link" href="https://github.com/yourusername/slic" target="_blank">View Project ↗</a>
-        </div>
-
-        <!-- Project 7 -->
-        <div class="project-card">
-          <h3 class="project-title">Omark</h3>
-          <p class="project-description">
-            Omarke is a facial recognition system that uses a binary search algorithm for efficient searching for absent faces in pictures based on a dataset.
-          </p>
-          <p class="project-tech">Technologies: Python</p>
-          <a class="project-link" href="https://github.com/yourusername/omark" target="_blank">View Project ↗</a>
-        </div>
-
-        <!-- Additional projects can be added here... -->
+        <!-- Add more projects as needed -->
       </div>
+    </main>
 
-      <!-- Contact Section -->
-      <div class="contact">
-        <p>
-          Reach out to me: <br />
-          <a href="mailto:bayoherbert3@gmail.com">bayoherbert3@gmail.com ↗</a>
-        </p>
-        <p>
-          <a href="https://github.com/yourusername"
-
+    <!-- Footer -->
+    <footer>
+      © 2024 Bayo Herbert. All rights reserved.
+    </footer>
+  </body>
+</html>

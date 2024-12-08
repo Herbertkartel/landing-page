@@ -17,15 +17,16 @@
       /* Navigation Header */
       nav {
         text-align: center;
-        background-color: #333;
-        padding: 15px 0;
+        background-color: #ffffff; /* White background for the nav header */
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd; /* Subtle border to separate nav */
       }
 
       nav a {
-        color: white;
+        color: #333; /* Darker text color for visibility */
         text-decoration: none;
-        margin: 0 20px;
-        font-size: 1.2em;
+        margin: 0 15px;
+        font-size: 1em; /* Smaller font size for better fit */
       }
 
       nav a:hover {
@@ -97,16 +98,34 @@
         text-decoration: underline;
       }
 
+      /* Footer */
+      footer {
+        text-align: center;
+        background-color: #ffffff; /* White background for footer */
+        padding: 10px 0;
+        border-top: 1px solid #ddd;
+        font-size: 0.9em;
+        color: #666;
+      }
+
       /* Adjust layout for smaller screens */
       @media (max-width: 768px) {
         .writing-list {
           grid-template-columns: 1fr 1fr;
+        }
+
+        nav a {
+          font-size: 0.9em; /* Adjust font size for smaller screens */
         }
       }
 
       @media (max-width: 480px) {
         .writing-list {
           grid-template-columns: 1fr;
+        }
+
+        nav a {
+          font-size: 0.8em; /* Further adjustment for very small screens */
         }
       }
     </style>
@@ -122,7 +141,8 @@
 
     <main class="writing-section">
       <p class="quote">
-        "Writing code is like writing a poem – it’s an art form that communicates ideas in the language of computers." - Unknown
+        "Writing code is like writing a poem – it’s an art form that communicates ideas in the language of computers."
+        - Unknown
       </p>
 
       <h2>Writing Portfolio</h2>
@@ -154,25 +174,7 @@
           <a class="writing-link" href="https://yourportfolio.com/restful-api-express" target="_blank">Read More ↗</a>
         </div>
 
-        <!-- Writing Project 4 -->
-        <div class="writing-card">
-          <h3 class="writing-title">Getting Started with Docker and Containers</h3>
-          <p class="writing-description">
-            A beginner’s guide to Docker, explaining how to create and manage containers, as well as best practices for building containerized applications.
-          </p>
-          <a class="writing-link" href="https://yourportfolio.com/getting-started-with-docker" target="_blank">Read More ↗</a>
-        </div>
-
-        <!-- Writing Project 5 -->
-        <div class="writing-card">
-          <h3 class="writing-title">Understanding Git and GitHub: A Developer’s Guide</h3>
-          <p class="writing-description">
-            A detailed explanation of version control with Git and GitHub, including basic commands, branching strategies, and collaboration techniques.
-          </p>
-          <a class="writing-link" href="https://yourportfolio.com/git-and-github" target="_blank">Read More ↗</a>
-        </div>
-
-        <!-- Additional writing projects can be added here... -->
+        <!-- Additional writing projects -->
       </div>
 
       <!-- Contact Section -->
@@ -190,5 +192,9 @@
         </p>
       </div>
     </main>
+
+    <footer>
+      &copy; 2024 Bayo Herbert. All Rights Reserved.
+    </footer>
   </body>
 </html>

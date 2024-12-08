@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About - Bayo Herbert</title>
-    <link href="style.css" rel="stylesheet" />
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -16,26 +15,31 @@
 
       /* Navigation Header */
       nav {
-        background-color: #333; /* Black background for nav */
-        padding: 15px 0;
+        background-color: #fff; /* White background for nav */
+        color: #333;
+        padding: 10px 0;
         text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add slight shadow */
       }
 
       nav a {
-        color: white;
+        color: #333; /* Dark text color */
         text-decoration: none;
-        margin: 0 20px;
-        font-size: 1.2em;
+        margin: 0 15px;
+        font-size: 0.9em; /* Smaller text size */
+        font-weight: bold; /* Make text bold */
       }
 
       nav a:hover {
         text-decoration: underline;
       }
 
+      /* About Section */
       .about-section {
         display: flex;
-        align-items: center; /* Align image and text on the same level */
+        align-items: center; /* Align image and text */
         justify-content: center; /* Center the content */
+        flex-wrap: wrap; /* Ensure wrapping on smaller screens */
         max-width: 900px;
         margin: 50px auto;
         background: #fff;
@@ -48,14 +52,15 @@
       .image-container {
         flex: 1;
         margin-right: 20px; /* Space between the image and text */
-        position: relative; /* To position the location text relative to the image */
+        text-align: center; /* Center-align image in mobile views */
       }
 
       .image-container img {
-        width: 100%;
+        max-width: 100%;
         height: auto;
-        display: block;
         border-radius: 8px;
+        display: block;
+        margin: 0 auto; /* Center-align image on smaller screens */
       }
 
       .location {
@@ -93,14 +98,27 @@
       strong {
         color: #333;
       }
+
+      /* Responsive Design */
+      @media screen and (max-width: 768px) {
+        .about-section {
+          flex-direction: column; /* Stack items vertically */
+          text-align: center;
+        }
+
+        .image-container {
+          margin-right: 0; /* Remove margin on mobile */
+          margin-bottom: 20px; /* Add space between image and text */
+        }
+      }
     </style>
   </head>
   <body>
     <!-- Navigation Header -->
     <nav>
       <a href="index.html">Home</a>
-      <a href="generic.html">About</a>
-      <a href="elements.html">Portfolio</a>
+      <!--<a href="generic.html">About</a> -->
+      <a href="#elements">Portfolio</a>
       <a href="writing.html">Writing</a>
     </nav>
 
@@ -109,7 +127,7 @@
       <!-- Image Section -->
       <div class="image-container">
         <img
-          src="images/pic09.jpg" 
+          src="images/pic09.jpg"
           alt="Bayo Herbert"
         />
         <!-- Location Text Below the Image -->

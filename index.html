@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Bayo Herbert - AI/ML Researcher, Entrepreneur, and Speaker">
-    <meta name="keywords" content="Bayo Herbert, AI Researcher, Entrepreneur, Speaker">
-    <meta name="author" content="Bayo Herbert">
+    <meta name="description" content="Bayo Herbert - AI/ML Researcher, Entrepreneur, and Speaker" />
+    <meta name="keywords" content="Bayo Herbert, AI Researcher, Entrepreneur, Speaker" />
+    <meta name="author" content="Bayo Herbert" />
     <link href="/main.css" rel="stylesheet" type="text/css" />
     <script src="script.js"></script>
     <link rel="icon" href="https://img.icons8.com/color/344/laptop--v1.png" />
@@ -22,7 +22,7 @@
 
       body {
         font-family: 'Arial', sans-serif;
-        background-color: #f7f9fc;
+        background-color: white; /* Set background to white */
         color: #333;
         line-height: 1.6;
       }
@@ -37,31 +37,31 @@
       }
 
       header {
-        background-color: #333;
+        background-color: white; /* White background for header */
         padding: 10px 0;
-        color: white;
         position: sticky;
         top: 0;
         z-index: 100;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
       }
 
       .navbar {
         display: flex;
-        justify-content: center;
-        gap: 20px;
+        justify-content: center; /* Center-align the navigation items */
+        gap: 30px; /* Add spacing between links */
       }
 
       .navbar a {
-        color: white;
-        font-size: 18px;
-        padding: 10px;
+        color: #333; /* Dark text */
+        font-size: 14px; /* Smaller font size */
+        font-weight: bold; /* Bold text */
         text-transform: uppercase;
         letter-spacing: 1px;
+        padding: 10px;
       }
 
       .navbar a:hover {
-        background-color: #575757;
-        border-radius: 5px;
+        color: #0073e6; /* Highlight color on hover */
       }
 
       main {
@@ -87,70 +87,17 @@
         margin-bottom: 20px;
       }
 
-      section.about {
-        margin-bottom: 40px;
-      }
-
-      section.about h2 {
-        font-size: 2em;
-        color: #333;
-        margin-bottom: 20px;
-        text-align: center;
-      }
-
-      .roles {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-        margin-top: 30px;
-      }
-
-      .role {
-        background-color: #e9ecef;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        transition: all 0.3s ease;
-      }
-
-      .role h3 {
-        font-size: 1.5em;
-        color: #333;
-        margin-bottom: 10px;
-      }
-
-      .role p {
-        color: #555;
-        font-size: 1.1em;
-      }
-
-      .role:hover {
-        background-color: #d1e7dd;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      }
-
-      blockquote {
-        font-size: 1.5em;
-        font-style: italic;
-        color: #666;
-        margin: 40px 0;
-        text-align: center;
-        border-left: 5px solid #0073e6;
-        padding-left: 20px;
-      }
-
       footer {
         text-align: center;
         padding: 20px 0;
-        background-color: #333;
-        color: white;
-        margin-top: 50px;
+        background-color: white; /* White background */
+        color: #333; /* Dark text for contrast */
         font-size: 0.9em;
+        border-top: 1px solid #ccc; /* Subtle top border */
       }
 
       footer a {
-        color: white;
+        color: #0073e6;
         margin-left: 10px;
         font-size: 1em;
       }
@@ -158,43 +105,13 @@
       footer a:hover {
         text-decoration: underline;
       }
-
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        .navbar {
-          flex-direction: column;
-          gap: 10px;
-        }
-
-        .roles {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      @media (max-width: 480px) {
-        h1 {
-          font-size: 2em;
-        }
-
-        .navbar a {
-          font-size: 16px;
-        }
-
-        .role h3 {
-          font-size: 1.3em;
-        }
-
-        blockquote {
-          font-size: 1.3em;
-        }
-      }
     </style>
   </head>
 
   <body>
     <header>
       <div class="navbar" id="myNavbar">
-        <a href="index.html">Home</a>
+        <!--<a href="index.html">Home</a>-->
         <a href="generic.html">About</a>
         <a href="elements.html">Portfolio</a>
         <a href="writing.html">Writing</a>
@@ -204,7 +121,7 @@
     <main class="main">
       <h1>Hey, I am Bayo Herbert.</h1>
       <p>
-        I specialize in advancing artificial intelligence technologies, building impactful startups, and sharing knowledge through engaging talks. 
+        I specialize in advancing artificial intelligence technologies, building impactful startups, and sharing knowledge through engaging talks.
         My mission is to innovate, inspire, and empower.
       </p>
 
