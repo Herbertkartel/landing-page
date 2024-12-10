@@ -9,39 +9,54 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #ffffff; /* Set background color to white */
+        background-color: #ffffff;
         line-height: 1.6;
       }
 
-      /* Navigation Header */
       nav {
-        background-color: #fff; /* White background for nav */
+        background-color: #fff;
         color: #333;
         padding: 10px 0;
         text-align: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add slight shadow */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
 
       nav a {
-        color: #333; /* Dark text color */
+        color: #333;
         text-decoration: none;
         margin: 0 15px;
-        font-size: 0.9em; /* Smaller text size */
-        font-weight: bold; /* Make text bold */
+        font-size: 0.9em;
+        font-weight: bold;
       }
 
       nav a:hover {
         text-decoration: underline;
       }
 
-      /* About Section */
+      .intro {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .intro h1 {
+        font-size: 2.5em;
+        margin: 0;
+        color: #333;
+      }
+
+      .intro p {
+        font-size: 1.2em;
+        color: #555;
+        margin: 10px 0 0;
+      }
+
       .about-section {
         display: flex;
-        align-items: center; /* Align image and text */
-        justify-content: center; /* Center the content */
-        flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
         max-width: 900px;
-        margin: 50px auto;
+        margin: 20px auto;
         background: #fff;
         border-radius: 8px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -51,8 +66,8 @@
 
       .image-container {
         flex: 1;
-        margin-right: 20px; /* Space between the image and text */
-        text-align: center; /* Center-align image in mobile views */
+        margin-right: 20px;
+        text-align: center;
       }
 
       .image-container img {
@@ -60,14 +75,14 @@
         height: auto;
         border-radius: 8px;
         display: block;
-        margin: 0 auto; /* Center-align image on smaller screens */
+        margin: 0 auto;
       }
 
       .location {
         text-align: center;
         font-size: 16px;
         color: #666;
-        margin-top: 10px; /* Space between image and location */
+        margin-top: 10px;
       }
 
       .text-container {
@@ -75,7 +90,7 @@
         padding: 20px;
       }
 
-      h1 {
+      h2 {
         font-size: 2em;
         margin-bottom: 10px;
         color: #333;
@@ -99,61 +114,54 @@
         color: #333;
       }
 
-      /* Responsive Design */
       @media screen and (max-width: 768px) {
         .about-section {
-          flex-direction: column; /* Stack items vertically */
+          flex-direction: column;
           text-align: center;
         }
 
         .image-container {
-          margin-right: 0; /* Remove margin on mobile */
-          margin-bottom: 20px; /* Add space between image and text */
+          margin-right: 0;
+          margin-bottom: 20px;
         }
       }
     </style>
   </head>
   <body>
-    <!-- Navigation Header -->
     <nav>
       <a href="index.html">Home</a>
-      <!--<a href="generic.html">About</a> -->
-      <a href="#elements">Portfolio</a>
+      <a href="elements.html">Portfolio</a>
       <a href="writing.html">Writing</a>
     </nav>
 
-    <!-- About Section -->
+    <div class="intro">
+      <h1>Bayo Herbert</h1>
+      <p><strong>Holberton School Graduate ↗</strong></p>
+    </div>
+
     <main class="about-section">
-      <!-- Image Section -->
       <div class="image-container">
         <img
           src="images/pic09.jpg"
           alt="Bayo Herbert"
         />
-        <!-- Location Text Below the Image -->
         <p class="location">Gaborone, Botswana</p>
       </div>
 
-      <!-- Text Section -->
       <div class="text-container">
-        <h1>Bayo Herbert</h1>
-        <p><strong>Holberton School Graduate ↗</strong></p>
+        <h2>About Me</h2>
         <p>
-          I am a software engineer with a background in software development and artificial intelligence. I recently graduated from <strong>Holberton School</strong>, where I specialized in software engineering with a focus on Full-Stack Development and Machine Learning.
+          I am a software engineer specializing in Full-Stack Development and
+          Machine Learning. As a graduate of <strong>Holberton School</strong>, I develop scalable
+          AI/ML systems and intuitive applications.
         </p>
         <p>
-          Currently, I work primarily with <strong>AI/ML systems</strong>, including Core ML and scalable backend systems (API/Microservices/DB). I’m skilled in developing solutions that merge performance, scalability, and usability.
+          My work includes creating efficient user interfaces, APIs, and microservices using tools like Next.js and Core ML. I also contribute to <strong>open-source projects</strong> on my <a href="https://github.com/yourusername" target="_blank">GitHub ↗</a>.
         </p>
+        <p>Outside tech, I enjoy ping-pong and solving problems on LeetCode.</p>
         <p>
-          In addition, I am proficient in <strong>Full-Stack Development</strong>—creating intuitive user interfaces and efficient backend systems for web and mobile platforms (using frameworks such as Next.js, React Native, and Material UI), some of which integrate machine learning models.
-        </p>
-        <p>
-          A passionate advocate for <strong>open-source development</strong>, I have contributed to libraries, tools, and projects in web development, data systems, and machine learning/AI—all of which are open-sourced on my <a href="https://github.com/yourusername" target="_blank">GitHub ↗</a>.
-        </p>
-        <p>Beyond tech, I am a competitive ping-pong player and an enthusiastic problem-solver on platforms like LeetCode.</p>
-        <p>
-          <strong>Contact Me:</strong><br />
-          Reach out via email: <a href="mailto:bayoherbert3@gmail.com" target="_blank">bayoherbert3@gmail.com ↗</a>
+          <strong>Contact:</strong><br />
+          <a href="mailto:bayoherbert3@gmail.com" target="_blank">Email ↗</a>
         </p>
         <p>
           <a href="https://github.com/yourusername" target="_blank">GitHub ↗</a>
@@ -166,3 +174,5 @@
     </main>
   </body>
 </html>
+
+

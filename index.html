@@ -22,46 +22,37 @@
 
       body {
         font-family: 'Arial', sans-serif;
-        background-color: white; /* Set background to white */
+        background-color: white;
         color: #333;
         line-height: 1.6;
       }
 
-      a {
-        text-decoration: none;
-        color: #0073e6;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
       header {
-        background-color: white; /* White background for header */
+        background-color: white;
         padding: 10px 0;
         position: sticky;
         top: 0;
         z-index: 100;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
 
       .navbar {
         display: flex;
-        justify-content: center; /* Center-align the navigation items */
-        gap: 30px; /* Add spacing between links */
+        justify-content: center;
+        gap: 30px;
       }
 
       .navbar a {
-        color: #333; /* Dark text */
-        font-size: 14px; /* Smaller font size */
-        font-weight: bold; /* Bold text */
+        color: #333;
+        font-size: 14px;
+        font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 10px;
       }
 
       .navbar a:hover {
-        color: #0073e6; /* Highlight color on hover */
+        color: #0073e6;
       }
 
       main {
@@ -73,11 +64,22 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
 
-      h1 {
-        font-size: 2.5em;
-        color: #333;
-        text-align: center;
-        margin-bottom: 20px;
+      /* Style for word fade-in animation */
+      .fade-in {
+        display: inline-block;
+        opacity: 0;
+        animation: fadeInOut 3s infinite;
+        animation-delay: var(--delay);
+        margin-right: 10px; /* Adds space between words */
+      }
+
+      @keyframes fadeInOut {
+        0%, 100% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
       }
 
       p {
@@ -90,20 +92,10 @@
       footer {
         text-align: center;
         padding: 20px 0;
-        background-color: white; /* White background */
-        color: #333; /* Dark text for contrast */
+        background-color: white;
+        color: #333;
         font-size: 0.9em;
-        border-top: 1px solid #ccc; /* Subtle top border */
-      }
-
-      footer a {
-        color: #0073e6;
-        margin-left: 10px;
-        font-size: 1em;
-      }
-
-      footer a:hover {
-        text-decoration: underline;
+        border-top: 1px solid #ccc;
       }
     </style>
   </head>
@@ -111,7 +103,6 @@
   <body>
     <header>
       <div class="navbar" id="myNavbar">
-        <!--<a href="index.html">Home</a>-->
         <a href="generic.html">About</a>
         <a href="elements.html">Portfolio</a>
         <a href="writing.html">Writing</a>
@@ -119,7 +110,7 @@
     </header>
 
     <main class="main">
-      <h1>Hey, I am Bayo Herbert.</h1>
+      <h1 id="animated-text"></h1>
       <p>
         I specialize in advancing artificial intelligence technologies, building impactful startups, and sharing knowledge through engaging talks.
         My mission is to innovate, inspire, and empower.
@@ -157,5 +148,21 @@
     <footer>
       <p>&copy; 2024 Bayo Herbert. All Rights Reserved.</p>
     </footer>
+
+    <script>
+      // JavaScript for word-by-word animation
+      const text = "Hey, I am Bayo Herbert.";
+      const textContainer = document.getElementById("animated-text");
+
+      text.split(" ").forEach((word, index) => {
+        const span = document.createElement("span");
+        span.textContent = word;
+        span.classList.add("fade-in");
+        span.style.setProperty("--delay", `${index * 0.5}s`);
+        textContainer.appendChild(span);
+      });
+    </script>
   </body>
 </html>
+
+
