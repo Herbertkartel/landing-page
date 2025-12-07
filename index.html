@@ -73,7 +73,7 @@
       color: #555;
     }
 
-    /* Sections */
+    /* About Section with Images */
     section {
       padding: 80px 20px;
       max-width: 1200px;
@@ -97,7 +97,34 @@
       text-align: center;
     }
 
-    .role h3 { margin-bottom: 15px; color: #0073e6; }
+    .role img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .role h3 { margin-bottom: 10px; color: #0073e6; }
+
+    /* Portfolio Section */
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .portfolio img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .portfolio img:hover {
+      transform: scale(1.05);
+    }
 
     blockquote {
       font-style: italic;
@@ -153,6 +180,7 @@
       I specialize in advancing artificial intelligence technologies, building impactful startups, 
       and sharing knowledge through engaging talks. My mission is to innovate, inspire, and empower.
     </p>
+    <img src="placeholder-hero.jpg" alt="Hero Image" style="margin-top:20px; max-width:600px; border-radius:8px;">
   </section>
 
   <!-- About / Roles Section -->
@@ -160,17 +188,31 @@
     <h2 style="text-align:center;">What I Do</h2>
     <div class="roles">
       <div class="role">
+        <img src="images/zap.jpg" alt="AI/ML Researcher">
         <h3>AI/ML Researcher</h3>
         <p>Exploring cutting-edge machine learning and AI to solve real-world problems.</p>
       </div>
       <div class="role">
+        <img src="images/zap.jpg" alt="Entrepreneur">
         <h3>Entrepreneur</h3>
         <p>Building innovative startups that impact lives and contribute to a better world.</p>
       </div>
       <div class="role">
+        <img src="images/bap.jpg" alt="Speaker">
         <h3>Speaker</h3>
         <p>Delivering talks on technology, entrepreneurship, and AI to inspire and educate audiences worldwide.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2 style="text-align:center;">Portfolio</h2>
+    <div class="portfolio">
+      <img src="placeholder1.jpg" alt="Project 1">
+      <img src="placeholder2.jpg" alt="Project 2">
+      <img src="placeholder3.jpg" alt="Project 3">
+      <img src="placeholder4.jpg" alt="Project 4">
     </div>
   </section>
 
@@ -204,5 +246,4 @@
   </script>
 </body>
 </html>
-
 
