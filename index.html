@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bayo Herbert - AI/ML Researcher, Entrepreneur, and Speaker">
-  <title>Bayo Herbert</title>
+  <title>Bayo Herbert — Engineer, Writer, Founder</title>
   <style>
     :root {
       --bg: #ffffff;
       --text: #1a1a1a;
-      --accent: #555555;
+      --accent: #666666;
       --border: #eeeeee;
+      --highlight: #000000;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -19,192 +19,206 @@
       font-family: "Menlo", "Consolas", "Monaco", "Courier New", monospace;
       background-color: var(--bg);
       color: var(--text);
-      line-height: 1.5;
-      padding: 40px 20px;
+      line-height: 1.6;
+      padding: 60px 20px;
     }
 
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
-    }
+    .container { max-width: 750px; margin: 0 auto; }
 
-    header {
-      margin-bottom: 60px;
-    }
-
-    .navbar {
+    /* Header & Navigation */
+    header { margin-bottom: 80px; }
+    
+    .nav {
       display: flex;
-      gap: 20px;
-      margin-bottom: 40px;
+      gap: 25px;
+      margin-bottom: 50px;
+      font-size: 0.85rem;
+      font-weight: bold;
     }
 
-    .navbar a {
+    .nav a {
       text-decoration: none;
       color: var(--accent);
-      font-size: 0.9rem;
+      transition: color 0.2s;
     }
 
-    .navbar a:hover {
-      color: var(--text);
-      text-decoration: underline;
-    }
+    .nav a:hover { color: var(--highlight); }
 
-    /* Hero Section */
-    .hero {
-      margin-bottom: 80px;
-    }
-
+    /* Hero */
     .hero h1 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-bottom: 15px;
-      letter-spacing: -0.5px;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
     }
 
     .hero p {
-      font-size: 1rem;
-      color: var(--accent);
-      max-width: 100%;
+      font-size: 1.1rem;
+      color: var(--text);
+      max-width: 90%;
     }
 
-    /* Section Styling */
-    section {
-      margin-bottom: 60px;
-    }
+    .hero span { color: var(--accent); }
+
+    /* Sections */
+    section { margin-bottom: 80px; }
 
     h2 {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 0.2em;
       color: var(--accent);
-      margin-bottom: 25px;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 8px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
     }
 
-    .grid {
+    h2::after {
+      content: "";
+      flex-grow: 1;
+      height: 1px;
+      background: var(--border);
+      margin-left: 20px;
+    }
+
+    /* List Item Styling */
+    .entry {
+      margin-bottom: 30px;
       display: grid;
+      grid-template-columns: 120px 1fr;
       gap: 20px;
     }
 
-    .item {
-      padding: 15px 0;
-      border-bottom: 1px solid var(--border);
-      transition: all 0.2s ease;
-    }
-
-    .item:hover {
-      padding-left: 10px;
-      border-color: var(--text);
-    }
-
-    .item h3 {
-      font-size: 1rem;
-      margin-bottom: 5px;
-    }
-
-    .item p {
-      font-size: 0.9rem;
+    .entry .label {
+      font-size: 0.8rem;
       color: var(--accent);
+      padding-top: 4px;
     }
 
-    .link-list {
-      list-style: none;
+    .entry h3 { font-size: 1rem; margin-bottom: 4px; }
+    .entry p { font-size: 0.95rem; color: var(--accent); }
+    .entry a { color: var(--text); text-decoration: underline; text-underline-offset: 4px; }
+
+    /* Skills/Stack */
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .link-list li {
-      margin-bottom: 10px;
-    }
-
-    .link-list a {
-      color: var(--text);
-      text-decoration: none;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .link-list a:hover {
-      border-bottom: 1px solid var(--text);
+    .tag {
+      padding: 4px 10px;
+      background: #f5f5f5;
+      font-size: 0.75rem;
+      border-radius: 4px;
     }
 
     footer {
-      margin-top: 100px;
       font-size: 0.8rem;
       color: var(--accent);
-    }
-
-    /* Simple Fade Animation */
-    .fade-in {
-      animation: fadeIn 0.8s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      border-top: 1px solid var(--border);
+      padding-top: 40px;
     }
 
     @media (max-width: 600px) {
-      body { padding: 20px; }
-      .hero h1 { font-size: 1.5rem; }
+      .entry { grid-template-columns: 1fr; gap: 5px; }
+      body { padding: 40px 20px; }
     }
   </style>
 </head>
-
 <body>
-  <div class="container fade-in">
-    <nav class="navbar">
-      <a href="#about">work</a>
-      <a href="#projects">projects</a>
-      <a href="mailto:bayoherbert3@stanford.edu">contact</a>
+
+  <div class="container">
+    <nav class="nav">
+      <a href="generic.html">01 Engine</a>
+      <a href="#writing">02 Ink</a>
+      <a href="#ventures">03 Labs</a>
+      <a href="elements.html">04 Voice</a>
     </nav>
 
     <header class="hero">
       <h1>Bayo Herbert</h1>
       <p>
-        AI/ML Researcher & Entrepreneur. Building data-driven solutions 
-        for smallholder farmers and exploring the intersection of 
-        geospatial intelligence and climate finance.
+        A software engineer and researcher building at the intersection of 
+        <span>stochastic modeling</span>, <span>geospatial AI</span>, and 
+        <span>climate finance</span>. I solve problems with code, then write 
+        about how they break.
       </p>
     </header>
 
-    <section id="about">
-      <h2>Focus</h2>
-      <div class="grid">
-        <div class="item">
-          <h3>AI/ML Research</h3>
-          <p>Advancing plant intelligence and computer vision for agricultural insurance.</p>
+    <section id="engineering">
+      <h2>Engineering</h2>
+      <div class="entry">
+        <div class="label">Project</div>
+        <div>
+          <h3><a href="#">Stochastic Disease Modelling</a></h3>
+          <p>Architecting complex mathematical simulations to predict disease spread using Python and C++.</p>
         </div>
-        <div class="item">
-          <h3>Entrepreneurship</h3>
-          <p>Founding and scaling tech-enabled ventures across East Africa.</p>
-        </div>
-        <div class="item">
-          <h3>Public Speaking</h3>
-          <p>Discussing tech policy, EUDR compliance, and the future of African agritech.</p>
+      </div>
+      <div class="entry">
+        <div class="label">Stack</div>
+        <div class="stack">
+          <span class="tag">Linux</span>
+          <span class="tag">Python</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">C# / C++</span>
+          <span class="tag">Firebase</span>
         </div>
       </div>
     </section>
 
-    <section id="projects">
-      <h2>Select Projects</h2>
-      <ul class="link-list">
-        <li><a href="#">Nutravest</a> — Geospatial mapping & farmer traceability.</li>
-        <li><a href="#">LBS Energy</a> — Solar mini-grids for rural microenterprises.</li>
-        <li><a href="#">Soilpulse</a> — Scaling regenerative agriculture.</li>
-      </ul>
+    <section id="writing">
+      <h2>Writing & Research</h2>
+      <div class="entry">
+        <div class="label">Tech Writing</div>
+        <div>
+          <h3>Independent Technical Writer</h3>
+          <p>Breaking down complex ML concepts and engineering workflows into digestible documentation and guides.</p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="label">Fellowships</div>
+        <div>
+          <h3>YEFFA–FANRPAN Fellow</h3>
+          <p>Researching agrifood policy and the role of digital infrastructure in rural development.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="connect">
-      <h2>Connect</h2>
-      <div class="navbar">
-        <a href="https://www.linkedin.com/in/bayo-herbert-472b92160/">LinkedIn</a>
-        <a href="https://x.com/Herbertkartel1">Twitter</a>
-        <a href="https://github.com/Herbertkartel">GitHub</a>
+    <section id="ventures">
+      <h2>Ventures (Labs)</h2>
+      <div class="entry">
+        <div class="label">Founder</div>
+        <div>
+          <h3>Nutravest</h3>
+          <p>Geospatial mapping and AI traceability for 14,000+ smallholder farmers.</p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="label">Founder</div>
+        <div>
+          <h3>LBS Energy</h3>
+          <p>Deploying solar mini-grids for productive-use energy in Northern Uganda.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="speaking">
+      <h2>Speaking</h2>
+      <div class="entry">
+        <div class="label">Recent</div>
+        <div>
+          <h3>Policy & Innovation</h3>
+          <p>Keynotes on EUDR compliance, AI ethics in agriculture, and scaling tech in East Africa.</p>
+        </div>
       </div>
     </section>
 
     <footer>
-      &copy; 2026 Bayo Herbert. Built with precision.
+      <p>Connect: <a href="https://github.com/Herbertkartel" style="color:var(--text)">GitHub</a> / <a href="https://www.linkedin.com/in/bayo-herbert-472b92160/" style="color:var(--text)">LinkedIn</a> / <a href="https://x.com/Herbertkartel1" style="color:var(--text)">Twitter</a></p>
+      <p style="margin-top:10px">&copy; 2026 Bayo Herbert. Optimized for humans and crawlers.</p>
     </footer>
   </div>
+
 </body>
 </html>
