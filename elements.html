@@ -3,106 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bayo Herbert — Speaker & Strategist</title>
+  <title>Bayo Herbert — 04 Voice</title>
   <style>
     :root {
       --bg: #ffffff;
-      --text: #111111;
+      --text: #1a1a1a;
       --accent: #666666;
       --border: #eeeeee;
-      --highlight: #fcfcfc;
+      --highlight: #000000;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: "Inter", -apple-system, sans-serif;
-      background: var(--bg);
+      font-family: "Menlo", "Consolas", "Monaco", "Courier New", monospace;
+      background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      padding: 40px 20px;
+      padding: 60px 20px;
     }
 
-    .container { max-width: 900px; margin: 0 auto; }
+    .container { max-width: 750px; margin: 0 auto; }
 
+    /* Navigation */
+    .nav {
+      display: flex;
+      gap: 25px;
+      margin-bottom: 50px;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: color 0.2s;
+    }
+
+    .nav a:hover { color: var(--highlight); }
+
+    /* Hero */
     header { margin-bottom: 80px; }
-    .nav { margin-bottom: 40px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
-    .nav a { text-decoration: none; color: var(--accent); margin-right: 20px; }
+    h1 { font-size: 2rem; font-weight: 700; margin-bottom: 20px; letter-spacing: -1px; }
+    header p { font-size: 1.1rem; color: var(--text); max-width: 90%; }
+    header span { color: var(--accent); }
 
-    h1 { font-size: 2.5rem; letter-spacing: -1.5px; margin-bottom: 20px; }
-    
-    /* Speaker Gallery Section */
-    .speaker-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      margin-bottom: 80px;
-    }
+    /* Sections */
+    section { margin-bottom: 80px; }
 
-    .event-card {
-      border: 1px solid var(--border);
-      background: var(--highlight);
-      overflow: hidden;
-      transition: transform 0.2s ease;
-    }
-
-    .event-card:hover { transform: translateY(-5px); border-color: #000; }
-
-    .event-image {
-      width: 100%;
-      height: 250px;
-      background: #ddd; /* Placeholder for your actual images */
+    h2 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      margin-bottom: 30px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      color: #999;
-      font-size: 0.8rem;
-      object-fit: cover;
     }
 
-    .event-info { padding: 25px; }
-    .event-info .label { 
-      font-size: 0.7rem; 
-      text-transform: uppercase; 
-      color: var(--accent); 
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-      display: block;
+    h2::after {
+      content: "";
+      flex-grow: 1;
+      height: 1px;
+      background: var(--border);
+      margin-left: 20px;
     }
 
-    .event-info h3 { font-size: 1.2rem; margin-bottom: 12px; line-height: 1.3; }
-    .event-info p { font-size: 0.9rem; color: var(--accent); }
-
-    /* Policy Pillars Section */
-    .policy-strip {
-      background: #000;
-      color: #fff;
-      padding: 60px 40px;
-      margin: 0 -20px 80px -20px;
+    /* Entry Grid */
+    .entry {
+      margin-bottom: 30px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
+      grid-template-columns: 120px 1fr;
+      gap: 20px;
     }
 
-    .pillar h4 { font-size: 0.7rem; text-transform: uppercase; margin-bottom: 15px; color: #888; }
-    .pillar p { font-size: 0.95rem; line-height: 1.5; }
-
-    /* Quote Section */
-    .quote {
-      font-size: 1.5rem;
-      font-family: "Georgia", serif;
-      font-style: italic;
-      margin-bottom: 80px;
-      border-left: 4px solid #000;
-      padding-left: 30px;
-      color: #333;
+    .entry .label {
+      font-size: 0.8rem;
+      color: var(--accent);
+      padding-top: 4px;
     }
 
-    footer { border-top: 1px solid var(--border); padding-top: 40px; font-size: 0.8rem; color: var(--accent); }
+    .entry h3 { font-size: 1rem; margin-bottom: 4px; }
+    .entry p { font-size: 0.95rem; color: var(--accent); }
+    
+    /* Image Support inside entries */
+    .entry-img {
+        width: 100%;
+        max-width: 400px;
+        margin-top: 15px;
+        border: 1px solid var(--border);
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+    }
+    .entry-img:hover { filter: grayscale(0%); }
 
-    @media (max-width: 768px) {
-      .speaker-grid, .policy-strip { grid-template-columns: 1fr; }
-      .event-image { height: 200px; }
+    footer {
+      font-size: 0.8rem;
+      color: var(--accent);
+      border-top: 1px solid var(--border);
+      padding-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .entry { grid-template-columns: 1fr; gap: 5px; }
+      body { padding: 40px 20px; }
     }
   </style>
 </head>
@@ -110,82 +114,79 @@
 
   <div class="container">
     <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="generic.html">Engineering</a>
-      <a href="writing.html">Writing</a>
+      <a href="index.html">01 Engine</a>
+      <a href="index.html#writing">02 Ink</a>
+      <a href="index.html#ventures">03 Labs</a>
+      <a href="voice.html" style="color: var(--highlight);">04 Voice</a>
     </nav>
 
     <header>
       <h1>Voice & Presence</h1>
-      <p style="font-size: 1.2rem; color: var(--accent); max-width: 600px;">
-        On stage, I bridge the gap between technical innovation and regional policy, advocating for a sustainable African energy and agricultural future.
+      <p>
+        On stage, I bridge the gap between <span>technical innovation</span> and <span>regional policy</span>, advocating for a sustainable African energy and agricultural future.
       </p>
     </header>
 
-    <section class="speaker-grid">
+    <section id="engagements">
+      <h2>Engagements</h2>
       
-      <div class="event-card">
-        <img class="event-image" src="images/bap.jpeg" alt="Bayo speaking at Future of Energy Conference">
-        <div class="event-info">
-          <span class="label">Keynote & Pitch</span>
-          <h3>Future of Energy Conference</h3>
-          <p>Presenting LBS Energy's roadmap for off-grid communities to thrive using clean, solar mini-grid infrastructure at the futures for energy conference in Ghana.</p>
+      <div class="entry">
+        <div class="label">Keynote</div>
+        <div>
+          <h3>Future of Energy Conference — Ghana</h3>
+          <p>Presenting LBS Energy's roadmap for off-grid communities to thrive using clean, solar mini-grid infrastructure.</p>
+          <img src="images/bap.jpeg" class="entry-img" alt="Ghana Keynote">
         </div>
       </div>
 
-      <div class="event-card">
-        <img class="event-image" src="images/yefa.jpg" alt="Bayo at East Africa Carbon Markets Forum">
-        <div class="event-info">
-          <span class="label">Presenter / Panelist</span>
+      <div class="entry">
+        <div class="label">Panelist</div>
+        <div>
           <h3>East Africa Carbon Markets Forum</h3>
           <p>Exploring strategies for sustainable carbon trading and its direct application in driving regenerative agriculture.</p>
         </div>
       </div>
 
-      <div class="event-card">
-        <div class="event-image">Photo: AUDA-NEPAD Summit</div>
-        <div class="event-info">
-          <span class="label">Innovation Showcase</span>
+      <div class="entry">
+        <div class="label">Showcase</div>
+        <div>
           <h3>Land Accelerator Africa</h3>
-          <p>A global stage for Nutravest’s AI-driven geospatial solutions for land restoration.</p>
+          <p>Global stage for Nutravest’s AI-driven geospatial solutions for land restoration at the AUDA-NEPAD Summit.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pillars">
+      <h2>Core Topics</h2>
+      
+      <div class="entry">
+        <div class="label">Focus 01</div>
+        <div>
+          <h3>Energy Justice</h3>
+          <p>Decentralizing power through mini-grids to enable rural micro-enterprise growth.</p>
         </div>
       </div>
 
-      <div class="event-card">
-  <div class="event-image">
-    <img src="images/hifa.jpg" alt="Policy Fellowship" style="width:100%; height:auto;">
-  </div>
-  <div class="event-info">
-    <span class="label">Research Presentation</span>
-    <h3>Agrifood Systems Fellowship</h3>
-    <p>Discussing the intersection of technology and policy for regional agrifood security.</p>
-  </div>
-</div>
-
-    </section>
-
-    <div class="quote">
-      "We're pitching our innovation for off-grid communities to thrive with clean, solar mini-grid energy."
-    </div>
-
-    <section class="policy-strip">
-      <div class="pillar">
-        <h4>Energy Justice</h4>
-        <p>Decentralizing power through mini-grids to enable rural micro-enterprise growth.</p>
+      <div class="entry">
+        <div class="label">Focus 02</div>
+        <div>
+          <h3>Carbon Markets</h3>
+          <p>Using data-driven traceability to bring transparent carbon income to smallholders.</p>
+        </div>
       </div>
-      <div class="pillar">
-        <h4>Carbon Markets</h4>
-        <p>Using data-driven traceability to bring transparent carbon income to smallholders.</p>
-      </div>
-      <div class="pillar">
-        <h4>EUDR Strategy</h4>
-        <p>Preparing East African exports for the evolving landscape of European trade regulations.</p>
+
+      <div class="entry">
+        <div class="label">Focus 03</div>
+        <div>
+          <h3>EUDR Strategy</h3>
+          <p>Preparing East African exports for evolving European trade regulations.</p>
+        </div>
       </div>
     </section>
 
     <footer>
-      <p>Invite Bayo to speak: <strong>herbert@nutravestug.com</strong></p>
-      <p style="margin-top:10px;">&copy; 2026 Bayo Herbert. All rights reserved.</p>
+      <p>Invite Bayo to speak: <a href="mailto:herbert@nutravestug.com" style="color:var(--text)">herbert@nutravestug.com</a></p>
+      <p style="margin-top:10px">&copy; 2026 Bayo Herbert. Optimized for humans and crawlers.</p>
     </footer>
   </div>
 
